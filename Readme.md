@@ -1,6 +1,6 @@
 # Linux Commands Quick Reference
 
-![filters image](images/1.png)
+![filters image](1.png)
 ## I/O Streams
 
 ### stdin
@@ -17,7 +17,9 @@ Example: `ls nofile 2> err.txt`
 
 ---
 
-![file-commands image](images/2.png)  
+![file-commands image](2.png)
+![file-commands image](3.png)
+![file-commands image](4.png) 
 ## File Commands
 
 ### echo
@@ -74,7 +76,7 @@ Example: `unexpand file.txt`
 
 ---
 
-![pipe image](images/3.png)  
+  
 ## Pipe
 
 ### pipe (|)
@@ -87,7 +89,7 @@ Example: `ls | tee list.txt`
 
 ---
 
-![filters image](images/3.png)  
+![filters image](4.png)  
 ## Filters
 
 ### uniq
