@@ -1,69 +1,103 @@
-I/O Streams
+# Linux Commands Quick Reference
 
-stdin (0): Standard input (keyboard/file).
-Example: cat < file.txt (reads from file as input).
+![filters image](images/1.png)
+## I/O Streams
 
-stdout (1): Standard output (screen by default).
-Example: echo "Hi" > out.txt (writes to file).
+### stdin
+Standard input (keyboard/file).  
+Example: `cat < file.txt`  
 
-stderr (2): Standard error (error messages).
-Example: ls nofile 2> err.txt (redirects error).
+### stdout
+Standard output (screen/file).  
+Example: `echo "Hi" > out.txt`  
 
-Text Processing & File Commands
+### stderr
+Standard error (error messages).  
+Example: `ls nofile 2> err.txt`  
 
-cut – Extracts sections from each line.
-Example: cut -d"," -f1 file.csv (prints first column).
+---
 
-paste – Merges files line by line.
-Example: paste f1.txt f2.txt (combines columns).
+![file-commands image](images/2.png)  
+## File Commands
 
-sort – Sorts lines of text files.
-Example: sort names.txt (sorts alphabetically).
+### echo
+Prints text to output.  
+Example: `echo "Hello World"`  
 
-tr – Translates or deletes characters.
-Example: echo "linux" | tr a-z A-Z (LINUX).
+### cut
+Extracts columns or fields.  
+Example: `cut -d"," -f1 data.csv`  
 
-join – Joins lines from two files on a common field.
-Example: join f1.txt f2.txt (matches IDs).
+### paste
+Merges files line by line.  
+Example: `paste f1.txt f2.txt`  
 
-split – Splits large file into smaller chunks.
-Example: split -b 1M bigfile part_ (1MB chunks).
+### sort
+Sorts lines in a file.  
+Example: `sort names.txt`  
 
-head – Displays first lines of a file.
-Example: head -5 log.txt (first 5 lines).
+### tr
+Translates or deletes characters.  
+Example: `echo "hi" | tr a-z A-Z`  
 
-tail – Displays last lines of a file.
-Example: tail -f log.txt (live log view).
+### join
+Joins files on a common field.  
+Example: `join f1.txt f2.txt`  
 
-Redirection & Piping
+### split
+Splits large files into smaller chunks.  
+Example: `split -b 1M bigfile part_`  
 
-pipe (|) – Sends output of one command as input to another.
-Example: cat file | grep "error"
+### head
+Shows first lines of a file.  
+Example: `head -n 5 file.txt`  
 
-tee – Reads from stdin, writes to stdout and file.
-Example: ls | tee list.txt
+### tail
+Shows last lines of a file (with `-f` for live logs).  
+Example: `tail -f log.txt`  
 
-Counting & Conversion
+### nl
+Adds line numbers to file content.  
+Example: `nl notes.txt`  
 
-nl – Adds line numbers to file content.
-Example: nl notes.txt
+### wc
+Counts lines, words, and characters.  
+Example: `wc -l file.txt`  
 
-wc – Counts lines, words, characters.
-Example: wc -l file.txt (line count).
+### expand
+Converts tabs to spaces.  
+Example: `expand file.txt`  
 
-expand – Converts tabs to spaces.
-Example: expand file.txt
+### unexpand
+Converts spaces to tabs.  
+Example: `unexpand file.txt`  
 
-unexpand – Converts spaces to tabs.
-Example: unexpand file.txt
+---
 
-Filtering
+![pipe image](images/3.png)  
+## Pipe
 
-uniq – Removes duplicate lines (adjacent only).
-Example: uniq sorted.txt
+### pipe (|)
+Sends output of one command as input to another.  
+Example: `cat f | grep error`  
 
-grep – Searches for patterns.
-Example: grep "error" log.txt
+### tee
+Writes output to screen and file.  
+Example: `ls | tee list.txt`  
 
-awk – Pattern scanning and processing.
-Example: awk '{print $1}' file.txt (prints first column).
+---
+
+![filters image](images/3.png)  
+## Filters
+
+### uniq
+Removes duplicate lines (only adjacent).  
+Example: `uniq sorted.txt`  
+
+### grep
+Searches for patterns in text.  
+Example: `grep "error" log.txt`  
+
+### awk
+Processes text by fields or patterns.  
+Exam
