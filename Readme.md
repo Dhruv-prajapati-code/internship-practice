@@ -102,4 +102,4 @@ Example: `grep "error" log.txt`
 
 ### awk
 Processes text by fields or patterns.  
-Exam
+Examle: `awk '{print $1}' file.txt`
